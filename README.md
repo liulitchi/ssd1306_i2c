@@ -29,14 +29,16 @@ sudo apt install build-essential python-dev
 
 下载adafruit提供的代码：
 
-1，git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
+git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
 
-2, cd Adaffruit_Python_SSD1306
+cd Adaffruit_Python_SSD1306
 
-3, sudo python setup.py install
+sudo python setup.py install
 
 
 执行本地代码：
+
+git clone https://github.com/liulitchi/ssd1306_i2c.git 
 
 sudo python ssd1306_stats.py
 
