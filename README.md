@@ -41,5 +41,7 @@ sudo python setup.py install
 
 git clone https://github.com/liulitchi/ssd1306_i2c.git 
 
+cd ssd1306_i2c
+
 sudo python ssd1306_stats.py
 
