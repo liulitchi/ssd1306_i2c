@@ -21,14 +21,22 @@ SDA-----Pin 3
 
 
 预安装(最新系统已默认安装)：
+
 sudo apt update
+
 sudo apt install build-essential python-dev
 
+
 下载adafruit提供的代码：
+
 1，git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
+
 2, cd Adaffruit_Python_SSD1306
+
 3, sudo python setup.py install
 
+
 执行本地代码：
+
 sudo python ssd1306_stats.py
 
