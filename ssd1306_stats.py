@@ -3,7 +3,7 @@
 
 import time
 
-import Adafruit_GPIO.I2C as I2C
+import Adafruit_GPIO.SPI as SPI
 import Adafruit_SSD1306
 
 from PIL import Image
@@ -13,10 +13,13 @@ from PIL import ImageFont
 import subprocess
 
 RST = None
-I2C_PORT = 0 
-I2C_DEVICE = 0
 
-#型号：128*64 I2C 
+#以下适合SPI:
+#DC=23
+#SPI_PORT = 0 
+#SPI_DEVICE = 0
+
+#型号：分辨率128*64 硬件 I2C 
 disp = Adafruit_SSD1306.SSD1306_128_64(rst=RST)
 
 disp.begin()
@@ -55,7 +58,7 @@ while True:
     #系统显示  shell scripts
     cmd = "hostname -I | cut -d\' \' -f1"
     IP = subprocess.check_output(cmd,shell = True )
-    cmd = "top -bn1 | grep load | awk '{printf \"CPU Load: %2f\", $(NF-2)}'"
+    cmd = "top -bn1 | grep load | awk '{printf \"CPU Load: %2.f\", $(NF-2)}'"
     CPU =subprocess.check_output(cmd, shell = True )
     cmd = "free -m | awk 'NR==2{printf \"Mem: %s/%sMB %.2f%%\", $3,$2,$3*100/$2 }'"
     MemUsage = subprocess.check_output(cmd, shell = True )
@@ -71,4 +74,4 @@ while True:
     #显示界面
     disp.image(image)
     disp.display()
-    time.sleep(.1)
+    time.sleep(3)
