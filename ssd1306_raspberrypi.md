@@ -3,8 +3,7 @@
 因为网上的有专门的ssd1306驱动（来自 adafruit项目），
 我就参考TA的代码，重新输了一遍，树莓派2实测正常显示，
 
--------------------
-
+---
 硬件（hardware）接线参考(对应物理针脚)：
 
 VCC-----Pin 17
@@ -23,30 +22,29 @@ out ----- Pin 12
 
 负极 ----- Pin 20
 
---------------------
+---
 
 
 预安装(最新系统已默认安装)：
 
-sudo apt update
+> sudo apt update
 
-sudo apt install build-essential python-dev
+> sudo apt install build-essential python-dev
 
 
 下载adafruit提供的代码：
 
-git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
+> git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
 
-cd Adaffruit_Python_SSD1306
+> cd Adaffruit_Python_SSD1306
 
-sudo python setup.py install
+> sudo python setup.py install
 
 
 执行本地代码：
 
-git clone https://github.com/liulitchi/ssd1306_i2c.git 
+> git clone https://github.com/liulitchi/ssd1306_i2c.git 
 
-cd ssd1306_i2c
+> cd ssd1306_i2c
 
-sudo python ssd1306_stats.py
-
+> sudo python ssd1306_stats.py
