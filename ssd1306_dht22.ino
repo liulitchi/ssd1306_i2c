@@ -31,9 +31,6 @@
 #define OLED_RESET     4 // SDA接线位置 a4，SCL接线位置a5
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-#define LOGO_HEIGHT   16
-#define LOGO_WIDTH    16
-
 #define DHTPIN  2                        // DHT22 接线位置，digital2，可自由设定
 #define DHTTYPE DHT22                    // DHT11 或DHT22，选择型号
 DHT dht(DHTPIN, DHTTYPE);                // 配置 DHT 库
