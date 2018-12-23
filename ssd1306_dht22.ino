@@ -48,7 +48,7 @@ void setup(void) {
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // 初始化I2C 地址 ，0x3D或0x3C
   // init done
 
-  dht.begin();                // 初始化 DHT 库文件
+  dht.begin();               // 初始化 DHT 库文件
 
   // Clear the display buffer.
   display.clearDisplay();
